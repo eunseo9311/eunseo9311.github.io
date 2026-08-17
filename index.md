@@ -31,4 +31,4 @@ permalink: /
 ## Work Experiences
 
 - 2026.08 - Present: [Soongsil NLP Lab](https://sites.google.com/view/ssu-nlp/home), Researcher
-- 2024.07 - Present: [UnivAI](https://univai.co.kr/), Co-founder & Software Engineer
+- 2024.07 - 2026.08: [UnivAI](https://univai.co.kr/), Co-founder & Software Engineer
