@@ -1,26 +1,14 @@
 ---
 layout: default
+title: Contact
+permalink: /contact/
 is_contact: true
+published: false
 ---
 
-* Email: [foo@xyz.com](mailto:foo@xyz.com)
+# Contact
 
-* Phone: [+91-123123](tel:+91-123123)
-
----
-
-## Mailing Address
-
-> 221B, Baker Street
->
-> London
->
-> United Kingdom
-
----
-
-## Social
-
-1. [Facebook](#)
-2. [Twitter](#)
-3. [Google+](#)
+- **Email:** [eunseosong4916@gmail.com](mailto:eunseosong4916@gmail.com)
+- **GitHub:** [github.com/eunseo9311](https://github.com/eunseo9311)
+- **Google Scholar:** [View profile](https://scholar.google.com/citations?hl=ko&view_op=list_works&user=VDWuOq0AAAAJ)
+- **LinkedIn:** [Eunseo Song](https://www.linkedin.com/in/eunseo-song-65543a393/)

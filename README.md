@@ -1,60 +1,43 @@
-# Researcher
+# Eunseo Song — Researcher Website
 
-### [Demo Website](http://ankitsultana.com/researcher)
+Eunseo Song의 Jekyll 기반 개인 연구자 홈페이지입니다. 공개 콘텐츠는 `index.md` 한 페이지에 있으며 Biography, 연락처/프로필 아이콘, Research Interest, Education, Work Experiences 순서로 구성됩니다. 프로필 사진은 `EunseoSong.JPG`를 사용합니다.
 
-A clean, single column, monospace resume template built for jekyll
+## 콘텐츠 수정
 
-### Installation
+- 본문과 링크: `index.md`
+- 이름, 사이트 주소, 프로필 사진 경로: `_config.yml`
+- 공통 레이아웃: `_layouts/default.html`
+- 디자인: `_sass/`
+- 연락처 아이콘: `assets/icons/`
 
-Simply fork the repository and edit away.
+현재 CV, Publications, Projects, Open Source Contributions, Awards 섹션은 없습니다. CV PDF가 준비되면 파일을 저장소에 추가한 뒤 이름 아래에 다음과 같은 한 줄을 추가할 수 있습니다.
 
-#### Installation via remote themes
-
-* Just setting `remote_theme: ankitsultana/researcher@gem` in `_config.yml` should work. Although in that case, I am not sure how
-you would build your site locally for testing. If you know how, open up an issue and let me know.
-* For more info, [refer this](https://blog.github.com/2017-11-29-use-any-theme-with-github-pages/).
-
-### Customization
-
-* You can edit the `.md` (markdown) files as you see fit. You can also add some other markdown file, say `foo.md` in the root directory of the repository. It will then be accessible like so `{{ url of your website }}/foo`.
-
-* You can of course remove `contact.md` if you don't want it
-
-* To set the heading, edit the `title` variable in `_config.yml`
-
-* To edit the `links` mentioned on the navigation bar, you can edit `_config.yml`. For example:
-
-```
-nav:
- - name: "About"
-   link: "/researcher/"
- - name: "Resume"
-   link: "resume.pdf"
- - name: "Contact"
-   link: "contact"
+```markdown
+* [CV]({{ '/assets/files/cv.pdf' | relative_url }})
 ```
 
-* You can change the accent (color of hyperlinks) by editing the `accent` variable in `_sass/vars.scss`
+## 로컬 실행
 
-* You can setup google analytics, by setting `tracking_id` in `_config.yml`
+Ruby와 Bundler가 설치된 환경에서 다음 명령을 실행합니다.
 
-* To add a profile picture, make sure to give the image tag the class `profile-picture`. In other words,do it like so:
-
-```html
-<img class="profile-picture" src="sherlock.jpg">
+```sh
+bundle install
+bundle exec jekyll serve
 ```
 
-* You can remove/customize the footer as you like by setting the
-appropriate variables in `_config.yml`
+브라우저에서 <http://localhost:4000>을 엽니다. 배포 환경과 같은 프로덕션 빌드는 다음과 같이 검사합니다.
 
-* (New in v1.2.0) You can add institute logo at the top, by setting `ins_logo` in `_config.yml`. If you want
-to adjust the logo's size, try setting `max-height` in `#ins-logo` in file `./_sass/_style.scss` to the desired
-value
+```sh
+JEKYLL_ENV=production bundle exec jekyll build
+```
 
-![Institute Logo Image Sample](https://github.com/ankitsultana/assets/raw/master/ins-logo-sample.png)
+## GitHub Pages 배포
 
-**Note:** Customizing the accent color might cause merge conflicts if you later try to merge from `bk2dcradle/researcher` to fetch updates/patches etc. (applicable only if you have forked).
+사용자 사이트용 저장소는 `eunseo9311.github.io`라는 이름으로 생성하고 코드를 올립니다. GitHub 저장소의 **Settings → Pages**에서 배포 브랜치와 `/ (root)`를 선택합니다. 현재 `_config.yml`은 사용자 사이트에 맞춰 다음 값으로 설정되어 있습니다.
 
-### License
+```yaml
+url: "https://eunseo9311.github.io"
+baseurl: ""
+```
 
-[GNU GPL v3](https://github.com/bk2dcradle/researcher/blob/gh-pages/LICENSE)
+실제 저장소를 다른 이름으로 만들면 프로젝트 사이트 규칙에 맞게 `url`과 `baseurl`을 수정해야 합니다. 비밀번호, API 키 등 비밀값은 저장소에 커밋하지 마세요.

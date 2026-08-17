@@ -1,28 +1,25 @@
-title: Chanjun Park
-url: "https://github.com/Parkchanjun"
+title: "Eunseo Song"
+description: "Undergraduate researcher exploring Large Language Models and Natural Language Processing."
+author: "Eunseo Song"
+url: "https://eunseo9311.github.io"
 baseurl: ""
+profile_picture: "/EunseoSong.JPG"
 
 markdown: kramdown
-#ins_logo: "./bits-logo.png"
-
-tracking_id: UA-138665784-2 #
-
-
-footer: no
-footer_url: "https://github.com/ankitsultana"
-footer_text: "Page design by Ankit Sultana"
 
 sass:
-    style: compressed
-    sass_dir: _sass
+  style: compressed
+  sass_dir: _sass
 
-nav:
- - name: "CV"
-   link: "Curriculum_Vitae_Chanjunpark__New_.pdf"
- - name: "NLP LAB"
-   link: "https://sites.google.com/view/ssu-nlp/home"
-
-
-remote_theme: ankitsultana/researcher@gem
-
-theme: jekyll-theme-cayman
+exclude:
+  - README.md
+  - backup.txt
+  - vendor
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  # Fork 원본 자료: 저장소에는 보존하되 개인 사이트에는 배포하지 않습니다.
+  - Curriculum_Vitae_Chanjunpark__New_.pdf
+  - bits-logo.png
+  - chanjunpark.jpeg
+  - chanjunpark_old.jpg
