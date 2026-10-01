@@ -5,6 +5,12 @@ url: "https://eunseo9311.github.io"
 baseurl: ""
 profile_picture: "/EunseoSong.JPG"
 
+nav:
+  - name: "CV"
+    link: "/cv/EunseoSong_CV.pdf"
+  - name: "NLP LAB"
+    link: "https://sites.google.com/view/ssu-nlp/home"
+
 markdown: kramdown
 
 sass:
@@ -18,6 +24,7 @@ exclude:
   - .bundle
   - Gemfile
   - Gemfile.lock
+  - cv/EunseoSong_CV.tex
   # Fork 원본 자료: 저장소에는 보존하되 개인 사이트에는 배포하지 않습니다.
   - Curriculum_Vitae_Chanjunpark__New_.pdf
   - bits-logo.png

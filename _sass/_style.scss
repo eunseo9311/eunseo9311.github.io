@@ -1,143 +1,137 @@
 @import "vars";
 
 html {
-    min-height: 100%;
-}
-
-body {
-    min-height: 100%;
+    height: 100%;
     margin: 0;
-    background: #fff;
-    color: $text-color;
+    padding: 0;
+}
+body {
+    margin: 0;
     font-family: "Noto Sans TC", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
+    height: 100%;
 }
-
 a {
-    color: $accent;
     text-decoration: none;
+    color: $accent;
 }
-
-a:hover,
-a:focus-visible {
+a:hover {
     text-decoration: underline;
 }
 
-a:focus-visible {
-    border-radius: 2px;
-    outline: 2px solid $accent;
-    outline-offset: 3px;
+.affiliation-logo-link {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+}
+.affiliation-logo-link:hover {
+    text-decoration: none;
+}
+hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#author-name {
+    font-size: 30px;
+    color: #272727;
+    display: inline-block;
+}
+.navbar {
+    padding: 50px 0;
+}
+.navbar-ul {
+    display: inline-block;
+    margin: 0 0 0 20px;
+    padding: 5px 0;
+}
+.nav-list {
+    list-style-type: none;
+    margin: 0 5px 0 10px;
+}
+.alignable {
+    display: inline-block;
+}
+.pull-left {
+    @extend .alignable;
+    float: left;
+}
+.pull-right {
+    @extend .alignable;
+    float: right;
 }
 
 .container {
-    width: calc(100% - #{2 * $page-gutter});
     max-width: $max-width;
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
 }
-
-.site-header {
-    box-sizing: border-box;
-    padding: 50px 0;
+.wrapper {
+    min-height: 100%;
 }
-
-.site-name {
-    color: $text-color;
-    font-size: 34px;
-    font-weight: 500;
-    line-height: 1.25;
-}
-
-.site-name:hover,
-.site-name:focus-visible {
-    text-decoration: none;
-}
-
-.content {
-    box-sizing: border-box;
-    margin-top: 24px;
-    padding-bottom: 56px;
-}
-
-.bio-section::after {
+#ins-logo {
+    margin: auto;
     display: block;
-    clear: both;
-    content: "";
+    max-height: 100px;
+    text-align: center;
 }
 
-.profile-picture {
-    float: right;
-    width: 150px;
-    height: 150px;
-    margin: -10px 0 18px 15px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 28%;
-}
-
-.social-links {
-    display: flex;
-    align-items: center;
-    min-height: 32px;
-    margin: 4px 0 23px;
-}
-
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    margin-right: 14px;
-    border-radius: 4px;
-    color: $text-color;
-    transition: opacity 120ms ease, transform 120ms ease;
-}
-
-.social-links a:hover {
-    opacity: .72;
-    transform: translateY(-1px);
-}
-
-.social-links img {
-    display: block;
-    width: 26px;
-    height: 26px;
-}
-
-@media (max-width: 600px) {
-    .site-header {
-        padding: 32px 0 20px;
-    }
-
-    .site-name {
-        font-size: 30px;
-    }
-
-    .content {
-        margin-top: 20px;
-        padding-bottom: 40px;
-    }
-
-    .profile-picture {
-        width: 120px;
-        height: 120px;
-        margin-left: 20px;
+@media (max-width: 800px) {
+    .container {
+        max-width: $med-width;
+        transition: 0.3s ease all;
     }
 }
-
-@media (max-width: 430px) {
-    .profile-picture {
+@media (max-width: 650px) {
+    .container {
+        max-width: 83%;
+    }
+    .navbar-ul {
+        margin-top: 5px;
+    }
+}
+@media (max-width: 500px) {
+    .navbar {
+        text-align: center;
+        padding: 50px 0 0;
+    }
+    #author-name {
+        width: 100%;
         float: none;
+    }
+    #navlist {
+        padding: 10px 0;
+        margin: 0;
         display: block;
-        width: 132px;
-        height: 132px;
-        margin: 0 auto 22px;
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+    #navlist li.alignable {
+        display: inline-block;
+    }
+    #navlist li.pull-left {
+        float: none;
+    }
+    #navlist li.nav-list {
+        margin: 0;
     }
 }
 
 @import "typography";
 @import "tables";
+
+// Keep affiliation marks inline and compact, overriding `.content img`.
+img.affiliation-logo {
+    display: inline-block;
+    width: auto;
+    height: 16px;
+    margin: 0 0 0 4px;
+    vertical-align: -3px;
+}
+
+// The profile photo is a full portrait, so crop it to the circle instead of letterboxing it.
+.content .profile-picture {
+    object-fit: cover;
+    object-position: center 28%;
+}

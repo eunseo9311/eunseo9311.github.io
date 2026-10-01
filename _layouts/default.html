@@ -9,7 +9,7 @@
     <meta name="author" content="{{ site.author | escape }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Open+Sans|Roboto&amp;display=swap">
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
     {% if site.favicon %}
         <link rel="icon" href="{{ site.favicon | relative_url }}">
@@ -24,12 +24,21 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="site-header container">
-            <a class="site-name" href="{{ '/' | relative_url }}" aria-label="Eunseo Song home">{{ site.title }}</a>
-        </header>
-        <main class="container content">
+        <div class="navbar container">
+            <a id="author-name" class="alignable pull-left" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+            <ul id="navlist" class="alignable pull-right navbar-ul">
+                {% for item in site.nav %}
+                    <li class="alignable pull-left nav-list">
+                        <a href="{{ item.link | relative_url }}">{{ item.name }}</a>{% unless forloop.last %} /{% endunless %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div style="clear:both"></div>
+        <hr>
+        <div class="container content">
             {{ content }}
-        </main>
+        </div>
     </div>
 </body>
 </html>

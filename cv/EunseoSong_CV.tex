@@ -1,0 +1,88 @@
+% Build: pdflatex EunseoSong_CV.tex (needs kotex-utf, nanumtype1). The site links to cv/EunseoSong_CV.pdf.
+\documentclass[10pt,a4paper]{article}
+
+\usepackage{kotex}
+\usepackage{dhucs-nanumfont}
+\usepackage{geometry}
+\geometry{left=1in, right=1in, top=1in, bottom=1in}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Title formatting based on the original CV.
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+
+% Reusable CV commands.
+\newcommand{\seclabel}[1]{\section*{\uppercase{#1}}}
+\newcommand{\cvitem}[2]{\textbf{#1} \hfill \small{#2}\\}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cyan,
+    filecolor=cyan,
+    urlcolor=cyan,
+    citecolor=cyan
+}
+
+\setlist[itemize]{leftmargin=*}
+\setlist[enumerate]{leftmargin=*}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge{Eunseo Song}} \\ \vspace{1.0em}
+    Undergraduate Student \\
+    Soongsil University \\
+    School of Computer Science and Engineering \\
+    \textbf{Email: }\href{mailto:eunseosong4916@gmail.com}{eunseosong4916@gmail.com} \\
+    \textbf{Home: }\url{https://eunseo9311.github.io/} \\
+    \textbf{LinkedIn: }\href{https://www.linkedin.com/in/eunseo-song-65543a393/}{\texttt{www.linkedin.com/in/eunseo-song-65543a393}}
+\end{center}
+
+\vspace{1em}
+
+\seclabel{Lifelong Research Objective}
+\small{My lifelong research objective is to understand how language models come to understand and use human language, and to turn that understanding into language technologies that people can trust in their everyday lives.}
+
+\seclabel{Research Interests}
+\small{My research interests lie in large language models (LLMs) and natural language processing (NLP). I am interested in how LLMs understand and generate language, how their abilities and limitations can be evaluated reliably, and how they can be made more robust and useful in real-world settings, including Korean language applications.}
+
+\seclabel{Education}
+\begin{itemize}
+    \item \cvitem{Soongsil University}{Mar. 2024 - Feb. 2028 (Expected)}
+    \small{B.S. in Computer Science and Engineering (advisor: Chanjun Park) \\
+    Lab: \url{https://sites.google.com/view/ssu-nlp/home}}
+\end{itemize}
+
+\newpage
+
+\seclabel{Publications}
+\textit{Equal contribution}: *, \textit{Corresponding author}: \textdagger
+\vspace{0.4em} \\
+\noindent\textit{Google Scholar}: \url{https://scholar.google.com/citations?user=VDWuOq0AAAAJ&hl=ko}
+
+\paragraph{Domestic Conferences}
+\begin{enumerate}
+    \item \small{\textbf{많은 정보가 더 나은 예측을 만드는가? 대규모 언어 모델의 인간 어휘 이해도 예측 분석} \\
+    \underline{송은서}, 조성현, 남채린, 추교준, 금지우, 박찬준\textsuperscript{\textdagger} \\
+    \textit{HCLT 2026}} \vspace{0.4em}
+
+    \item \small{\textbf{KoEvoSkillBench: 자기진화형 에이전트의 스킬 주입 보안을 위한 한국어 벤치마크} \\
+    김도윤, 김찬우, 조성현, 금지우, \underline{송은서}, 송지훈, 박찬준\textsuperscript{\textdagger} \\
+    \textit{HCLT 2026 - 우수논문}} \vspace{0.4em}
+
+    \item \small{\textbf{오답의 의미적 타당성 제거를 통한 LLM 벤치마크 결함 문항 식별} \\
+    송민수, 김찬우, 추교준, \underline{송은서}, 장지윤, 남채린, 이시현, 박찬준\textsuperscript{\textdagger} \\
+    \textit{HCLT 2026}} \vspace{0.4em}
+
+    \item \small{\textbf{언어 모델의 한국어 청자 높임 종결어미 선호 안정성 분석} \\
+    조성현, 장지윤, 이시현, 송지훈, \underline{송은서}, 박찬준\textsuperscript{\textdagger} \\
+    \textit{HCLT 2026}} \vspace{0.4em}
+
+    \item \small{\textbf{대규모 언어 모델의 도구 호출에서의 이름 의존성 분석} \\
+    남채린, 조성현, 이시현, 금지우, 송민수, \underline{송은서}, 박찬준\textsuperscript{\textdagger} \\
+    \textit{HCLT 2026}}
+\end{enumerate}
+
+\end{document}
